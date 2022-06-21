@@ -249,6 +249,8 @@ static int ts_mmi_gesture_handler(struct gesture_event_data *gev)
 
 		key_code = BTN_TRIGGER_HAPPY6;
 		pr_info("%s: double tap\n", __func__);
+		touch_cdev->double_tap_pressed = true;
+		sysfs_notify(&DEV_MMI->kobj, NULL, "double_tap_pressed");
 		break;
 	default:
 		pr_info("%s: unknown id=%x\n", __func__, gev->evcode);
