@@ -560,6 +560,7 @@ struct ts_mmi_dev {
 	struct touch_clip_area clip;
 
 	bool			double_tap_pressed;
+	bool			udfps_pressed;
 
 	/*
 	 * vendor provided
