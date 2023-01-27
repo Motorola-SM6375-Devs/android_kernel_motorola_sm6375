@@ -49,3 +49,6 @@ config DRM_PANEL_EVENT_NOTIFICATIONS
 	 If unsure, say N.
 
 endif
+
+config BOARD_USES_DOUBLE_TAP_CTRL
+	bool "Board uses Double Tap Control"
